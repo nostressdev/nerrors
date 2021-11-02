@@ -1,4 +1,4 @@
-module nerrors
+module github.com/nostressdev/nerrors
 
 go 1.16
 
