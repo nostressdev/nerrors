@@ -73,5 +73,8 @@ var errCodeToGRPC = map[ErrorType]codes.Code{
 }
 
 func GetErrorGRPC(err error) error {
+	if status.Code(err) != codes.Unknown {
+		return err
+	}
 	return status.Error(errCodeToGRPC[GetType(err)], err.Error())
 }
