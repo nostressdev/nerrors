@@ -11,6 +11,7 @@ const (
 	Internal
 	BadRequest
 	Validation
+	PermissionDenied
 )
 
 type customError struct {
